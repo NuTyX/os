@@ -79,6 +79,7 @@ drwxr-xr-x	root/root	usr/include/libavutil/
 -rw-r--r--	root/root	usr/include/libavutil/file.h
 -rw-r--r--	root/root	usr/include/libavutil/film_grain_params.h
 -rw-r--r--	root/root	usr/include/libavutil/frame.h
+-rw-r--r--	root/root	usr/include/libavutil/gain_map.h
 -rw-r--r--	root/root	usr/include/libavutil/hash.h
 -rw-r--r--	root/root	usr/include/libavutil/hdr_dynamic_metadata.h
 -rw-r--r--	root/root	usr/include/libavutil/hdr_dynamic_vivid_metadata.h
