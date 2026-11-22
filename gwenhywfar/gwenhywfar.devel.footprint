@@ -110,6 +110,7 @@ drwxr-xr-x	root/root	usr/include/gwenhywfar5/gwenhywfar/
 -rw-r--r--	root/root	usr/include/gwenhywfar5/gwenhywfar/plugindescr.h
 -rw-r--r--	root/root	usr/include/gwenhywfar5/gwenhywfar/portable_endian.h
 -rw-r--r--	root/root	usr/include/gwenhywfar5/gwenhywfar/process.h
+-rw-r--r--	root/root	usr/include/gwenhywfar5/gwenhywfar/quicksort.h
 -rw-r--r--	root/root	usr/include/gwenhywfar5/gwenhywfar/refptr.h
 -rw-r--r--	root/root	usr/include/gwenhywfar5/gwenhywfar/request.h
 -rw-r--r--	root/root	usr/include/gwenhywfar5/gwenhywfar/ringbuffer.h
