@@ -6,10 +6,16 @@ packager="spiky <spiky@nutyx.org>"
 makedepends=(gperf)
 
 name=libseccomp
-version=2.6.1
+version=2.6.2
 
 source=(https://github.com/seccomp/$name/releases/download/v$version/$name-$version.tar.gz)
 
-package() {
+build() {
+  cd $name-$version
+	./configure --prefix=/usr --disable-static
+make
+
+make DESTDIR=$PKG install
+
 rm $PKG/usr/lib/libseccomp.la
 }
