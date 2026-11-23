@@ -1,5 +1,6 @@
 drwxr-xr-x	root/root	etc/
 lrwxrwxrwx	root/root	etc/mtab -> ../proc/self/mounts
+lrwxrwxrwx	root/root	etc/os-release -> ../usr/lib/os-release
 drwx------	root/root	root/
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
@@ -14,6 +15,7 @@ lrwxrwxrwx	root/root	usr/bin/generate-nutyx -> install-nutyx
 -rwxr-xr-x	root/root	usr/bin/unsquash-nutyx
 lrwxrwxrwx	root/root	usr/bin/which -> ../../bin/busybox
 drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/os-release
 drwxr-xr-x	root/root	usr/lib/systemd/
 drwxr-xr-x	root/root	usr/lib/systemd/system/
 -rw-r--r--	root/root	usr/lib/systemd/system/setup-nutyx.service
