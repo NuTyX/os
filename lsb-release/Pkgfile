@@ -1,28 +1,24 @@
 description="Provides informations about LSB status (Linux Standards Base) of the distribution."
-url="https://www.linuxbase.org/"
+url="https://codeberg.org/gioele/lsb-release-minimal"
 
-maintainer="Sven-Hendrik Haase"
-contributors="Geantbrun"
+maintainer="Gioele Barabucci"
+contributors="Geantbrun, Spiky"
 packager="tnut <tnut@nutyx.org>"
 
 set=(core)
 
 name=lsb-release
-version=1.4
-release=2
+version=12.1
+release=1
+tag=35516080b3
 
-alias=(lsb_release)
+alias=(lsb_release, lsb-release-minimal)
 
-makedepends=(help2man)
+makedepends=(perl git)
 
-source=(http://sourceforge.net/projects/lsb/files/${alias}/${version}/${name}-${version}.tar.gz)
+source=(https://codeberg.org/gioele/lsb-release-minimal.git)
 
 build() {
-cd ${name}-${version}
-sed -i "s|n/a|unavailable|" lsb_release
-./help2man -N --include ./lsb_release.examples \
-              --alt_version_key=program_version ./lsb_release > lsb_release.1
-mkdir -p $PKG/usr/{bin,share/man/man1}
-install -v -m 644 lsb_release.1 $PKG/usr/share/man/man1/lsb_release.1 
-install -v -m 755 lsb_release $PKG/usr/bin/lsb_release
+ cd $name-$version
+ make DESTDIR=$PKG install
 }
