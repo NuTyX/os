@@ -9,8 +9,7 @@ makedepends=(zstd util-linux git)
 set=(chroot)
 
 name=nutyx
-version=919ecda
-
+version=1f4d48d
 # nutyx patch version
 # [ "$release" != "1" ] && patchname="$name-$version-consolidate-$release.patch"
 
@@ -31,4 +30,7 @@ package() {
  $PKG/usr/share/icons/hicolor/128x128/places/nutyx.png
 
  ln -sv ../../bin/busybox $PKG/usr/bin/which
+ # Only on testing branch
+ sed -i "s@RELEASE_TYPE=@RELEASE_TYPE=testing@" \
+   $PKG/usr/lib/os-release
 }
